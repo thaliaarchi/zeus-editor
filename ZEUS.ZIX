@@ -1,34 +1,433 @@
-00031
-C:\WORK\ZEUS\ZEUS.HLP
+00430
+C:\WORK\ZEUS3\ZEUS.HLP
 Zeus for Windows Help
-Automatic Backup
-Brief Keyboard
-Bugs and Problems
-Compiler Configuration
+About Zeus
+Advanced Software
+Backspace
+BookMarkDrop0
+BookMarkDrop1
+BookMarkDrop2
+BookMarkDrop3
+BookMarkDrop4
+BookMarkDrop5
+BookMarkDrop6
+BookMarkDrop7
+BookMarkDrop8
+BookMarkDrop9
+BookMarkGoto
+BookMarkGoto0
+BookMarkGoto1
+BookMarkGoto2
+BookMarkGoto3
+BookMarkGoto4
+BookMarkGoto5
+BookMarkGoto6
+BookMarkGoto7
+BookMarkGoto8
+BookMarkGoto9
+BraceMatch
+BraceMatchForward
+BraceMatchReverse
+Brief
+Cancel
+Cascade
+CharCopyFromLineAbove
+CharCopyFromLineBelow
+CharDelete
+CharQuote
+ClipboardPaste
+Close All
+Color Options
+Colors
+Compiler
+Compiler Options
+Compiler Support
+CompilerCompile
+CompilerOutputCopy
+CompilerOutputNext
+CompilerOutputPrevious
+CompilerOutputView
+CompilerSetup
 Contact Details
-Copyright and Licence Agreement
-Document Creation
-Document Editing
+Contents
+Copyright
+Dalog Boxes
+DOS Command Line
+DOS Shell
+Edit Clear
+Edit Copy
+Edit Cut
+Edit Find
+Edit Find Matching Brace
+Edit Find Next
+Edit Find Prevoius
+Edit Goto Bookmark
+Edit Goto Line
+Edit Options
+Edit Paste
+Edit Redo
+Edit Replace
+Edit Select All
+Edit Undo
+Editor
+Enter
+EnterNext
+EnterOpen
+Epsilon
+Errors
+Extension Options
+Extensions
+Extensions Edit
+Extensions New
+File Close
+File Exit
+File Filters
+File Name
+File Navigation
+File New
+File Open
+File Print
+File Print Setup
+File Reload Command
+File Save
+File Save All
+File Save As
+File SaveAs
+File Searching
+FileBackupReset
+FileBackupSet
+FileBackupToggle
+FileBackupWrite
+FileClose
+FileExit
+FileInsertAtCursor
+FileListDisplay
+FileName
+FileNew
+FileOpen
+FileOpenInLine
+FilePrint
+FilePrintAll
+FilePrintSetup
+FileReadOnlyModeReset
+FileReadOnlyModeSet
+FileReadOnlyModeToggle
+FileReadOnlyReset
+FileReadOnlySet
+FileReadOnlyToggle
+FileReload1
+FileReload2
+FileReload3
+FileReload4
+FileReload5
+FileReload6
+FileReload7
+FileReload8
+FileReload9
+FileReloadCurrent
+FileSave
+FileSaveAll
+FileSaveAs
+Filters
+Find
 Find Dialog
-Goto Line Number Dialog
-History of Versions
-Installation and Configuration
-Jump to Bookmark
-Open Dialog File Filters
-Ordering the Software
-OS/2 1.x, OS/2 2.x, Windows 3.x
-Other Products on Offer
-Quick Help Search Engine
-Registered Trademarks
+Font Dialog
+Fonts
+Function List
+FunctionFindAll
+FunctionFindNext
+FunctionFindPrevious
+Goto Bookmark
+Goto Line
+Help
+HelpAbout
+Helpful Hints
+HelpIndex
+HelpKeys
+HelpQuickHelp
+HelpQuickSearch
+HelpQuickSetup
+HelpRegister
+HelpUsing
+INI Values
+InsertModeReset
+InsertModeSet
+InsertModeToggle
+Installation
+IsEndOfLine
+IsOutsideLine
+IsStartOfLine
+IsWithinLine
+Keyboard
+Keymap
+LineCaseLower
+LineCaseTranspose
+LineCaseUpper
+LineCopy
+LineCut
+LineDelete
+LineDeleteEnd
+LineDeleteStart
+LineGoto
+LineWrapReset
+LineWrapSet
+LineWrapToggle
+Lower Case Command
+Macro Load
+Macro Options
+Macro Playback
+Macro Record
+Macro Repeated Playback
+Macro Save
+MacroExecute1
+MacroExecute10
+MacroExecute11
+MacroExecute12
+MacroExecute13
+MacroExecute14
+MacroExecute15
+MacroExecute2
+MacroExecute3
+MacroExecute4
+MacroExecute5
+MacroExecute6
+MacroExecute7
+MacroExecute8
+MacroExecute9
+MacroLoad
+MacroPlay
+MacroRecordReset
+MacroRecordSet
+MacroRecordToggle
+MacroRepeat
+Macros
+MacroSave
+Make
+Manual
+MarkBlockReset
+MarkBlockSet
+MarkBlockToggle
+MarkCaseLower
+MarkCaseTranspose
+MarkCaseUpper
+MarkColumnReset
+MarkColumnSet
+MarkColumnToggle
+MarkCopy
+MarkCopyEx
+MarkCopyToCursor
+MarkCursorEnd
+MarkCursorStart
+MarkCursorToggle
+MarkCut
+MarkCutEx
+MarkDelete
+MarkDeleteEx
+MarkHide
+MarkLineReset
+MarkLineSet
+MarkLineToggle
+MarkMoveToCursor
+MarkPaste
+MarkPasteEx
+MarkPrint
+MarkSelectAll
+MarkShiftLeft
+MarkShiftRight
+MarkWordCurrent
+MarkWordEnd
+MarkWordStart
+MarkWriteToFile
+Menu Commands
+Menu Compiler
+Menu Edit
+Menu File
+Menu Help
+Menu Macros
+Menu Options
+Menu Popup
+Menu Project
+Menu Tools
+Menu View
+Menu Window
+MoveDocumentCenter
+MoveDocumentEnd
+MoveDocumentEndEx
+MoveDocumentStart
+MoveDocumentStartEx
+MoveLineCenter
+MoveLineDown
+MoveLineEnd
+MoveLineHome
+MoveLineLeft
+MoveLineLeftEdge
+MoveLineRight
+MoveLineRightEdge
+MoveLineUp
+MovePageCenter
+MovePageDown
+MovePageEnd
+MovePageLeft
+MovePageRight
+MovePageStart
+MovePageUp
+MoveWordCenter
+MoveWordEnd
+MoveWordNext
+MoveWordPrevious
+MoveWordStart
+NotSupported
+OK
+Open Include
+OptionsColors
+OptionsEditor
+OptionsElectric
+OptionsExtension
+OptionsFilters
+OptionsFont
+OptionsKeyboard
+OptionsMacros
+OptionsTools
+Order Form
+Other Products
+Output Windows
+Power Editing
+Print
+Print Setup
+Program Arguments
+Project
+Project Open
+Project Options
+Project Support
+ProjectClose
+ProjectCurrent
+ProjectDisplay
+ProjectMake
+ProjectMakeAll
+ProjectOpen
+ProjectOutputCopy
+ProjectOutputView
+ProjectSetup
+Quick Help
+Quick Search
+QuickConfigurationCommand
+Redo
+Registration
+Regular Expression
+Regular Expressions
+Replace
 Replace Dialog
-Replace Tabs with Spaces and Tab Size
-Restore Files on Startup
-Restore Last Working Directory
-Setting up Zeus for Windows
-Shareware Software
-Smart Cursor Indenting
-Software Development
+ReplaceDialog
+ReplaceForward
+ReplaceNext
+ReplacePrevious
+ReplaceReverse
+ReplaceWordCurrent
+ScreenUpdate
+ScrollLineDown
+ScrollLineLeft
+ScrollLinePageCenter
+ScrollLinePageEnd
+ScrollLinePageStart
+ScrollLineRight
+ScrollLineUp
+SearchCaseReset
+SearchCaseSet
+SearchCaseToggle
+SearchDialog
+SearchDirectionReset
+SearchDirectionSet
+SearchDirectionToggle
+SearchForward
+Searching
+SearchNext
+SearchPrevious
+SearchRegexpReset
+SearchRegexpSet
+SearchRegexpToggle
+SearchReverse
+SearchWordCurrent
+SearchWordReset
+SearchWordSet
+SearchWordToggle
+Shareware
+Single Instance
 Software Registration
-Status and Toolbar
+SoundError
+SoundNote
+SoundOk
+SoundQuestion
+SoundWarning
+SpaceDelete
+SpaceDeleteEnd
+SpaceDeleteStart
+Standard Output
+StandardOutputCopy
+StandardOutputView
+Status Bar
+StatusBarViewReset
+StatusBarViewSet
+StatusBarViewToggle
+Tab
+TabBack
+TabBackChar
+TabChar
+TAG Values
+Technical Support
+Template
+Template Options
+Templates
+Text Marking
+Tile
+Toggle Case
+Tool Options
+Toolbar
+ToolBarViewReset
+ToolBarViewSet
+ToolBarViewToggle
+Tools
+ToolsCommand
+ToolsExecute1
+ToolsExecute10
+ToolsExecute11
+ToolsExecute12
+ToolsExecute13
+ToolsExecute14
+ToolsExecute15
+ToolsExecute2
+ToolsExecute3
+ToolsExecute4
+ToolsExecute5
+ToolsExecute6
+ToolsExecute7
+ToolsExecute8
+ToolsExecute9
+ToolsShell
+Trademarks
+Undo
+Unix
+Update
+Upper Case
+User Manual
+Version
+WindowArrange
+WindowCascade
+WindowCloseAll
+WindowNext
+WindowPrevious
+Windows
+WindowTile
+WindowTileHorizontal
+WindowTileVertical
+WordCaseLower
+WordCaseTranspose
+WordCaseUpper
+WordDelete
+WordDeleteEnd
+WordDeleteNext
+WordDeletePrevious
+WordDeleteStart
+WordStar
+Write File as Unix
 Xidicone Pty Ltd
-Zeus for Windows
+Zeus

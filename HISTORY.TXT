@@ -1,10 +1,10 @@
 
-      History of Changes for the Zeus for Windows Programmers Editor
-      ==============================================================
+      History of Changes for the Zeus for Windows Editor
+      ==================================================
 
 
 Version 1.00
----------------
+------------
 
 Initial release of the Zeus for Windows Version 1.00
 
@@ -22,7 +22,7 @@ following expansion did not work.
   Note: That the keyboard expansion is still coded to be case sensitive.
 
 2) Fixed:
-Tab characters where not being processed correctly in preprocessor
+Tab characters where not being processed correctly in the preprocessor
 string. For example the following would paint incorrectly.
           
            #<tab char here>ifdef 
@@ -34,28 +34,29 @@ strings. For example the following would paint incorrectly.
            "<tab char here>this is a string with a tab in it"
 
 4) Added:
-Electric Expansion "\b" control character and changed search to limit
-words with delimiters characters also (ie "(ifg<space>" would now
+Added electric expansion "\b" control character and changed search to 
+limit words with delimiters characters also (ie "(ifg<space>" would now
 expand out).
 
 6) Added:
-Backup interval edit field to editor options dialog box.
+Backup interval edit field to editor options dialog box was added.
 
 7) Added:
-If Zeus is minimised and a file is opened by double clicking or dropping
-on the Zeus for windows icon (using the File Manager, Zeus file associations)
+If Zeus is minimised and a file is opened by double clicking or dropping on
+the Zeus for windows icon (using the File Manager, Zeus file associations)
 then Zeus will be restored to normal size.
 
 8) Added:
 The Open dialog now has persistence. It remembers the file extension filter 
 last used (for the period of the edit session only).
 
+
 Version 1.02
 ------------
 
 9) Added:
 New functions, Close, Close All and Save All added to the toolbar and 
-Save All to the menu.
+Save All option added to the File menu.
 
 10) Added:
 Standard CUA keyboard mappings for cut, copy, paste and marking have
@@ -65,21 +66,21 @@ been added to editor.
 Better use of the hourglass for operations requiring CPU time.
 
 12) Added:
-Brief Ctrl-F5 toggle case sensitivity command.
+Brief Ctrl-F5 toggle case sensitivity command was added.
 
 13) Fixed:
-Shift-Tab and Tab of marked moves the area with tabs or spaces
-depending on the options editor "Replace tabs with space" option
-(old version would always use spaces).
+Tab and Shift-Tab of a marked area now moves the area with tabs or 
+spaces depending on the options editor "Replace tabs with space" 
+option (old version would always use spaces).
 
 
 Version 1.03
 ------------
 
 14) Fixed:
-Major problem with non US keyboard drivers now fixed. For example Zeus would
-cause crash if keyboard was set to German and an extended (Non ASCII) key 
-was pressed. 
+Major problem with non US keyboard drivers now fixed. For example Zeus 
+would cause crash if keyboard was set to German and an extended (Non 
+ASCII) key was pressed. 
 
 15) Fixed:
 Problem with compiler not working over different disk drives. ie c:\zeus
@@ -92,8 +93,8 @@ messages).
 
 17) Fixed:
 When the compiler is run in minimized mode, Zeus for Windows does not loose
-active status any more (it use to switch to the program manager if it was
-visible).
+active status any more (it would incorrectly switch to the program manager 
+if the PM was visible).
 
 18) Added:
 Brief Ctrl-K Kill to beginning of line command added.
@@ -123,8 +124,8 @@ Version 1.04 (Start of portable version)
 ----------------------------------------
 
 22) Fixed:
-Any multi select file open on any root directory (ie a:\\filename.txt) cause
-an error opening the selected files.
+Any multi select file open on any root directory (ie a:\\filename.txt) would
+cause an error opening the selected files.
 
 23) Fixed:
 Double click on error list box would loose the status bar error when the
@@ -135,12 +136,12 @@ Added feature to editor setup that enables the size of the newly created MDI
 window to be controled.
 
 25) Fixed:
-Smart indenting in overwrite mode would delete characters from the line below.
-This has now been fixed.
+Smart indenting in overwrite mode would delete characters from the line
+below. This has now been fixed.
 
 26) Added:
 Goto dialog and bookmark dialog now remember the last valid value entered.
-This also gives better feedback via the status line.
+Also better feedback via the status line was added.
 
 27) Added:
 The Error listbox now supports a horizontal scroll bar.
@@ -149,22 +150,22 @@ The Error listbox now supports a horizontal scroll bar.
 A Online Help QuickSearch feature was added to the Help menu popup.
 
 29) Fixed:
-The compiler error processing has been reworked in an effort to remove a few
-strange bugs that would sometimes occur while compiler. Also a third 
-parameter was added to the comand line passed to batch files while compiling
-(see online help for details).
+The compiler error processing has been reworked in an effort to remove a 
+few strange bugs that would sometimes occur while compiling. Also a third 
+parameter was added to the comand line arguments passed to compiler batch 
+file (see online help for details).
 
 30) Added:
 Added a new improved toolbar and status bar. It paints better, have less
-flicker and removes some of the keyboard problems (ie alt key does not work
-if the mouse pointer is on a toolbar button).
+flicker and removes some of the keyboard problems (ie using the old toolbar
+the alt key would not work if the mouse pointer is on a toolbar button).
 
 31) Added:
 Added a the ability to show and hide the toolbar and status bar using the
 menu options.
 
 32) Fixed:
-Hitting backspace at with the cursor at column position 0 does not delete
+Hitting backspace with the cursor at column position 0 does not delete
 the character like it use to.
 
 33) Fixed:
@@ -183,57 +184,58 @@ becomes write protected. Previously Zeus would just abort the compile without
 an error.
 
 37) Fixed:
-Zeus would let you start mutiple compiles while the first compile was in 
-progress. This eventually caused the system to GPF. Zeus has been fixed, so 
-that it only allows one compile at a time.
+Zeus would let you start mutiple compiles while the first compile was still
+in progress. This eventually caused the system to GPF. Zeus has been fixed,
+so that it now only allows one compile at a time.
 
 38) Added:
 The error window now supports the Control+Minus key (or file close menu)
-option. If the error windows contains compiler output the control minus returns
-you to the file that had been compiled and so it behaves like a revesrse to the
-Control+P list errors keystroke.
+option. If the error windows contains compiler output the control minus 
+returns you to the file that had been compiled and so it behaves like a 
+revesrse to the Control+P list errors keystroke.
 
 39) Fixed:
-The Open and Save As file dialog where modeless. The have now been made modal to
-the main application.
+The Open and Save As file dialog where modeless. The have now been made modal
+to the main application.
 
 40) Added:
-The file restore at startup now restores the file and the line number on startup.
+The file restore on startup feature now restores the file and the line number
+on startup.
 
 41) Added:
 The insert/overwrite now have proper insert and overwrite carets (cursors) 
 respecively, giving better visual feedback on the current insert mode.
 
 42) Fixed:
-The highlight code will highlight quoted strings differently to normal text. This
-algorithm would work for the first quoted string but not for the second of two
-quoted strings on the same line. For example:
+The word highlighting code will highlights quoted strings differently to 
+normal text. This algorithm would work for the first quoted string but not
+for the second of two quoted strings on the same line. For example:
 
          VALUE "CompanyName",      "Xidicone Pty Ltd",   "Zeus for Windows"
 
-for the line above Atl-h would correctly highlight the first but not the second or
-second strings. It now works correctly for all strings.
+for the line above Atl-h would correctly highlight the first but not the 
+second or second strings. It now works correctly for all strings.
 
 43) Added:
-The compile process now reports if the compile was successful, has warnings or has
-errors on the status line message field. Previously it only reported the compile 
-was complete.
+The compile process now reports if the compile was successful, has warnings
+or has errors. Previously it only reported the compile was complete.
 
 44) Fixed:
-If the Enter key was hit while text was highlighted, the highlighted text was not
-replaced by the enter key. This has now been fixed (NOTE: this ONLY applies when
-the editor is in insert mode).
+If the Enter key was hit while text was highlighted, the highlighted text 
+was not replaced by the enter key. This has now been fixed (NOTE: this ONLY 
+applies when the editor is in insert mode).
 
 
 Version 1.05 (Start of Windows 3.x Windows 95 Combined Development)
 -------------------------------------------------------------------
 
 45) Fixed:
-Fixed a few /****/ comment painting problems. I'm sure there are more to come!
+Fixed a few /****/ comment painting problems. I'm sure there are still a lot
+more to come!
 
-Bug #1: Put the cursor on the middle of the first comment bar line and hit the
-Alt-K key. Then hit undo and the painting does not return to the correct comment
-state.
+Bug #1: Put the cursor on the middle of the first comment line and then hit
+the Alt-K key. Then hit undo and the painting does not return to the correct
+comment state.
 
 /*************************************************************/
 This should return to none commented after the undo is done!
@@ -250,73 +252,73 @@ Bug #2: Insert line number one into the the block comment then hit undo.
 */
 
 46) Added:
-The search and replace dialog gives the user better feedback by using the status
-line to display a message when things go wrong.
+The search and replace dialog gives the user better feedback by using the 
+status line to display a message when things go wrong.
 
 47) Added:
 The editor setup option now allows you to toggle a left hand margin on or off.
 
 48) Fixed:
-Fixed 3 bugs with the comment colour highlighting /* comments */ processing. The
-old code was getting out of synch after line insertions and deletions. The new
-code has at least 3 less bugs to worry about.
+Fixed 3 bugs with the comment /* ie comments */ processing. The old code was
+getting out of synch after line insertions and deletions. The new code has at
+least 3 less bugs to worry about.
 
 48) Fixed:
-Improved the background compile processing. For example by improving the message 
-dispatch a typical background compile time has been reduced by 50% and loads
-from floppy disk are much faster.
+Improved the background compile processing. For example by improving the 
+message dispatch a typical background compile time has been reduced by 50% 
+and loads from floppy disk are much faster.
 
 49) Added:
-Added limited keyboard macro support to allow the recording and playback of simple
-key strokes macros. Now supports F7, F8 and Ctrl-R commands.
+Added limited keyboard macro support to allow the recording and playback of
+simple key strokes macros. Now supports F7, F8 and Ctrl-R commands.
 
 50) Added:
-Configurable colorize support based on file extension. This also allows things like
-the keywords, comment character, preprocessor character, string character and 
-delimiters characters to de defined for each file type.
+Configurable colorize support based on file extension. This also allows 
+things like the keywords, comment character, preprocessor character, string
+character and delimiters characters to de defined for each file type.
 
 51) Added:
-The editor now supports a basic line wrap feature. This allows you to define a 
-column at which the editor will automaticly line wrap, breaking the line on a 
-word boundry.
+The editor now supports a basic line wrap feature. This allows you to define
+a column at which the editor will automaticly line wrap, breaking the line on
+a word boundry.
 
 52) Fixed:
 Fixed a bug in the options editor dialog where the backup interval entry field 
 was getting disabled incorrectly.
 
 53) Added:
-The file open can now be configuired to allow/not allow single or multiple loads of
-files. This means that if the file is already loaded Zeus can be made to restore
-the original rather than loading a second copy, or a second copy can be opened if
-required.
+The file open can now be configuired to allow/not allow single or multiple 
+loads of files. This means that if the file is already loaded Zeus can be made
+to restore the original rather than loading a second copy, or a second copy
+can be opened if required.
 
 54) Fixed:
-Fixed a problem wil Zeus trying to open a file that was already opened by another
-application. After the sharing violation message Zeus would protection violate. This
-has now been fixed.
+Fixed a problem wil Zeus trying to open a file that was already opened by 
+another application. After the sharing violation message Zeus would protection 
+violate. This has now been fixed.
 
 54) Added:
-Added the ability to read and write unix text file in addition to the default standard
-MS-DOS text file formats.
+Added the ability to read and write unix text file in addition to the default 
+standard MS-DOS text file formats.
 
 55) Added:
-I have added as restore size feature. Zeus now remembers the size and position of the
-main frame window between editing sessions.
+I have added as restore size feature. Zeus now remembers the size and position 
+of the main frame window between editing sessions.
 
 56) Added:
-If the error handler finds the error in and external file and that error is selected
-from the error output window, the error handling will no try to open up the external
-file and goto the line at fault.
+If the error handler finds the error in and external file and that error is 
+selected from the error output window, the error handling will no try to open 
+up the external file and goto the line at fault.
 
 57) Added:
-Support for setting up and running external tools has been added to the main menu. Piping
-of the results to an output window has also been added. Files can be loaded from the 
-output window by just double clicking on any line in the output window, provided the 
-line selected contains a valid file name.
+Support for setting up and running external tools has been added to the main 
+menu. Piping of the results to an output window has also been added. Files can
+be loaded from the output window by just double clicking on any line in the 
+output window, provided the line selected contains a valid file name.
 
 58) Fixed:
-The print support in Zeus has been totally re-worked. This has improved the printing
-and hopefully fix the numerous problems with the old printing code.
+The print support in Zeus has been totally re-worked. This has improved the 
+printing and hopefully fix the numerous problems with the old printing code.
 
 59) Fixed:
 The CUA marking has been fixed to also allow CUA marking while using the 
@@ -324,12 +326,314 @@ word left or word right keys. Also the ghost mark sometimes seen when CUA
 marking has been fixed.
 
 60) Added:
-The command line processing has been improved to allow the '?' and '*' wild card 
-characters. This enabled multiple files to be loaded via the command line, for 
-example when Zeus is run from File Manager or Program Manager men run commands.
+The command line processing has been improved to allow the '?' and '*' wild 
+card characters. This enabled multiple files to be loaded via the command 
+line, for example when Zeus is run from File Manager or Program Manager menu
+run commands.
+
 
 Version 1.05.3
 --------------
 
 NOTE: Zeus Windows 3.x Version complete and tested while Zeus  Windows 95
       awaits the final release of Windows 95 to allow testing to be completed.
+
+
+Version 1.06 Alpha Started (programmable keyboard and better macro support)
+---------------------------------------------------------------------------
+
+61) Added:
+Support for the Alt-B list file buffer function was added.
+
+62) Added:
+Support for the Ctrl-G list file functions in file was added. This will only
+work with C\C++ type function prototypes.
+
+63) Added:
+Support for regular expression search and replace was added.
+
+64) Added:
+The search and replace dialog now support the tab search and replace on the
+tab character using the '\t' search and replace strings.
+
+65) Added:
+The contents of the output window and the compiler message window can now
+be copied to clipboard.
+
+66) Fixed/Added (take your pick):
+The line goto command now retains the current cursor position.
+
+67) Fixed
+The backspace command would incorrectly do a character delete when the cursor
+was located past the EOL. This has been fixed to only move the cursor in this
+case.
+
+68) Fixed
+The captured output window was getting cleared every time a tool was run 
+regardless of whether the tool was run with the capture output option enabled.
+This has now been fixed.
+
+69) Added:
+Zeus can take any line of text in a file, parse it for a valid file name and
+then try to load the file. This function is attached to the Ctrl+E command or 
+the right mouse button single click. Use this function to open in clude files.
+
+70) Added:
+The Windows 95 version has had long file name support added.
+
+71) Added:
+The following Brief keystrokes where added:
+
+      Ctrl-Home     - Top of page
+      Ctrl-End      - Bottom of page
+      Ctrl-PageUp   - Start of document
+      Ctrl-PageDown - End of document
+      Ctrl-b        - Bottom of page
+      Ctrl-t        - Top of page
+      Ctrl-d        - Scroll down a line
+      Ctrl-s        - Scroll up a line (remapped)
+      Ctrl-e        - Locate file on current line
+      
+72) Added:
+The following CUA keystrokes where added:
+
+      Ctrl-A         - Redo changes
+      Ctrl-Backspace - Redo changes
+      Alt-Backspace  - Undo changes
+
+73) Added:
+The MDI Tile Vertical and Horizontal windows options have been added.
+
+74) Added:
+The toolbar now has a find and replace buttons.
+
+75) Added:
+The the search, replace, goto and goto bookmark functions now position the
+jump to new line in the center of the window, not at the top or bottom of
+the window as the previously did.
+
+76) Added:
+The the search, replace, goto and goto bookmark dialogs remember their 
+screen positions and restore to their old locations.
+
+77) Fixed:
+Fixed a problem with the auto indenting not working in line wrapping mode. 
+
+78) Fixed:
+Fixed a problem with maximum line length auto wrapping feature used on
+file load. In trying to wrap the line on a word break it would sometimes
+corrupt the wrapped line.
+
+79) Fixed:
+The right mouse button upper case, lower case and toogle functions did not
+work correctly in overwrite mode. This has now been fixed.
+
+80) Fixed:
+The saving of the startup files on exit did not always save the files 
+correctly, resulting in not all files getting reloaded on startup. This 
+problem has now been fixed.
+
+81) Fixed:
+The tokenizer code could not distinguish like words for example, if
+you had the following keywords:
+
+   right
+   rightof
+
+then the 'rightof' keyword would never get recognized.
+
+
+Version 1.07 Windows 3.x, Windows 95 and Windows NT Release
+-----------------------------------------------------------
+
+NOTE: The Zeus for Windows product is built from a single code base so now
+      all products irrespective of platform share the same version numbers.
+
+
+Version 2.00.01 Alpha Started (new keyboard manager, new memory manager)
+------------------------------------------------------------------------
+
+81) Fixed:
+If you ran a compile where the compiler EXE was not found the error window
+incorrectly reported no errors found. This has now been fixed.
+
+82) Added:
+The abitlity to match the following braces have been added "{}[]<>" 
+and the function was bound to the Ctrl+']' key.
+
+83) Fixed:
+An obscure command line bug has hopefully been fixed. For some machines
+with some command lines rentered, the F10 command would lock up after running
+the same command after a few times. This bug was very hard to replicate but I
+it seems to have gone away so I think it may have been fixed (seemed to be 
+some type of timing problem).
+
+84) Fixed:
+The double click close of an MDI window was not closing the message and output
+windows correctly (only in Win 3.x). This could result in a GPF if these 
+windows where then put to use (ie compile or run a tool). The normal file
+close or Ctrl + Minus method would work correctly.
+
+85) Fixed:
+The output window would no longer function once a Ctrl+G scan function was
+run. This has now been fixed.
+
+86) Added:
+New user configurable keyboard mapping allows Zeus to support multiple 
+keyboard mapping, including WordStar, Epsilon and Brief.
+
+87) Added:
+Support for TAG characters via command line added.
+
+88) Fixed:
+The online help has been totally re-written, hopefully making it easier to 
+use Zeus and it's many features.
+
+89) Fixed:
+Maximum file size increase to 60,000 lines, up from the original 10,000
+line limit of earlier versions.
+
+90) Fixed:
+There was an obscure bug that would cause a GPF once in a while. This was
+tracked down to an error in the MDI window management, so hopefully this
+occasional GPF has been fixed. The aim is to make sure Zeus never GPF's.
+
+91) Added:
+Project support has been added to Zeus. This allows you to build a 
+project from within Zeus.
+
+92) Added:
+Compiler support now supports multiple command lines. The compiler that is
+used to compile the active file is choosen using the file extension.
+
+93) Fixes:
+A large number of smaller fixes have also been applied, fixing things like
+painting problems, improved error handling and other minor problems.
+
+94) Added:
+Version information has been added to all Zeus data files. This was done to
+make Zeus more stable and allow easier backward compatability in future
+versions of Zeus. The only draw back is that Zeus 2.00 data files are NOT
+compatabile with earlier Zeus data files.
+
+95) Added:
+Zeus now does a basic form of Smart Bracing. Zeus will automaticlly add
+a matching brace and indent the cursor for the '{' brace character.
+
+
+Version 2.00
+------------
+
+Initial release of the Zeus for Windows Version 2.00 (Febuary 1996)
+
+
+Version 2.01
+------------
+
+96) Fixed:
+The support for long file extension has finally been fixed (hopefully!). Zeus
+would not initialise the extension information when long file extensions was
+used. Note Zeus still only recognizes the first 3 characters of the extension
+to provide 8.3 backward compatibility, so long extensions are identified by 
+their first three characters only.
+
+97) Fixed:
+Sometimes Zeus would not paste the last line from the clipboard. This has 
+now been fixed.
+
+98) Fixed:
+The backspace key would sometimes delete a line if once the backspace 
+reached the column 0 position. This has now been fixed.
+
+99) Fixed:
+The in Options | Compiler "Normal" radio button would stay activate once
+pressed. This has been fixed.
+
+100) Added:
+A literal character key has been added to the extension dialog. This allows
+you to define a literal character which is the used by the colorizer as a 
+way of ignoring the qutoe characters. For example:
+	"this is quote \" is not the end of the string"
+
+101) Fixed:
+Fixed the DDE problem with the Win32 version of Zeus. You would get a 
+GPF if you double clicked a WinFile file, during the DDE connection.
+
+102) Added:
+The Print dialog FilePrint() function will now automaticlly select the
+print marked area if it is activated will text in the current document
+is marked.
+
+103) Fixed:
+The F10 dir command would incorrectly detect a line nume in the captured
+output of the DIR command in Windows 95. This would result im a file
+load to a incorrect line number.
+
+104) Added:
+Increased the column position display to 4 digits.
+
+105) Fixed:
+The Zeus dialog box's would only save there position on cancel, not on the
+Ok or close commands. The dialogs now save their position whenever the
+dialog is closed.
+
+106) Added:
+The printout will automaticlly wrap the print output to the next line if
+the line length exceeds the page width.
+
+107) Added:
+The printout will now filter all non-printable characters from the printer
+output stream.
+
+108) Fixed:
+When using the Options | Compiler dialog and trying to delete entries from
+the "Installed Command Line" either the line is not deleted or wrong line
+is deleted from the list. This has now been fixed.
+
+109) Fixed:
+When using the Options | Compiler dialog and trying to define a command
+line, Zeus did not process command lines where the options follow the
+file name, for example: "c51 SAMPLE.C large debug code"
+
+110) Added:
+The ERR files produced by Zeus for the compile process could get large in
+number so I added a feature where by Zeus will clean up these files once
+they are no longer required.
+
+111) Fixed:
+The support for long file extension has finally been fixed again! Found a
+bug with Zeus compiling long file extensions like 'java' files.
+
+112) Fixed:
+Zeus had a sizing problem when the Option | Editor Display Mode was set to
+create default. Once created the cursor would get lost of the bottom of the 
+page and would not auto scroll. The scroll bars would also not work and 
+sometimes would not be shown.
+
+113) Fixed:
+Zeus would not load binary files because they contained null characters. If
+a binary file was loaded Zeus would get caught in a infinite loop. Now Zeus
+loads binary files but any null characters are replace with white space and
+the file is loaded as read only.
+
+114) Fixed:
+The FileReloadCurrent() edit function would cause a GPF sometimes. This has
+now been fixed.
+
+115) Added:
+Support for reading and writing OEM text files was added. This feature 
+allows you to edit ANSI text files (character set used by Windows) even
+if the source is an ASCII (OEM) text file (character set commonly used 
+under DOS).
+
+116) Fixed:
+The $Column and $Line TAG macros where returning incorrect results.
+
+117) Fixed:
+If you start a second version of Zeus with the -S(econd) option Zeus will
+just re-activate the previous versions.
+
+Version 2.15 Windows 3.x, Windows 95 and Windows NT Release
+-----------------------------------------------------------
+
+

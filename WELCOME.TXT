@@ -1,0 +1,68 @@
+  Welcome to Zeus for Window
+  ==========================
+  
+  Introduction
+  ------------
+  Zeus for Windows is a programmers editor design specifically for the
+  programmer working in the Windows 3.x, Windows 95 and Windows NT 
+  environments. 
+  
+  Design Philosophy
+  -----------------
+  Zeus has been designed to cater for the special text editing needs of
+  software developers.  Care has been taken to make sure that Zeus is 
+  language independent, meaning that editing features that are particular
+  to a specific language have been omitted, or have been replaced by an 
+  alternative solution that is generic in nature.  Hopefully this means
+  that Zeus will be a useful to for all types of programmers working with
+  varied programming languages, not just C/C++ programmers like myself.
+  
+  Take Time to Learn Zeus
+  -----------------------
+  Because of the complexity of Zeus, to take full advantage of all the 
+  features on offer will require, that you the user take some time to 
+  learn and understand how to use this editor. To help in this learning
+  process,  an extensive online help facility is provided. Sometimes the
+  information required may not be immediately obvious but in most cases
+  there will be some information somewhere that describe the feature in
+  question. Always take a little extra time to study the information
+  provided and if after all this searching, you still have not found what
+  you where looking for, just send me a note and I will gladly answer any
+  questions you may have.
+  
+  Use the Context Sensitive Help (it makes things easy)
+  -----------------------------------------------------
+  When you require help remember to just press F1 key. If you require help
+  on a particular dialog box the F1 and help buttons will provide help that
+  is specific to dialog box you are currently using. If you press F1 while 
+  a menu option is highlighted,  help will be provided on that particular 
+  menu option. This feature provides a quick an easy way of learning what a 
+  particular function of Zeus is designed to do and how it should be used.
+  
+  Also pay particular attention to the status bar message line. Whenever
+  Zeus detects any sort of problem, or has any information to convey to
+  the user, it will do so using the status bar. Hopefully the error that
+  is reported by Zeus will be meaningfull?
+  
+  Conclusion
+  ----------
+  I hope you find that using Zeus is both enjoyable and rewarding. If 
+  you find the product's functionality is limited in any way, or if you
+  have any suggestions on ways to improve Zeus please let me know. If you
+  find Zeus a good product, also let me know. I find any type of feedback
+  is good feedback.
+  
+  Most importantly, if you find a section of the Online help either 
+  confusing, misleading, missing or just plain wrong I would very much
+  appreciate if you send me a note detailing the problem. The online help
+  is only in its second revision and it still needs lots of work.
+  
+  Now all that is need if for you press F1 to start learning how to use
+  Zeus. 
+  
+  Regards Jussi Jumppanen
+  jussi@sydney.dialix.oz.au
+  
+  PS: All registered user should send me a note to ensure you get added
+      to my list of registered user. This way I will keep you informed
+      about sotfware upgrades as they become available.
