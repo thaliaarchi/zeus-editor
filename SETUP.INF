@@ -1,0 +1,51 @@
+; Module name: Setup.Inf
+; Programmer : Jussi Jumppanen
+
+[Application] 
+;Application global information 
+AppName=Zeus Setup
+DefDir=C:\ZEUS
+SpaceNeeded=900
+DefPMGroup=ZEUS.GRP, Zeus for Windows
+ 
+[Disks] 
+;List of diskettes needed to install the product and the name 
+;of each diskette with the following format.
+;
+;Disk Number = Description of Disk
+1=Zeus Disk #1
+ 
+[Dirs] 
+;lists of directories that must be created from the destination directory 
+;files to be copied are copied from the root directory (always)
+1=.
+2=zConfig
+3=zHelp
+
+[Files] 
+;description, name, (dir #), (diskette #), (System File) (Compressed)
+Read me text file     , README.TXT ,  1, 1, N,  N
+History text file     , HISTORY.TXT,  1, 1, N,  N
+Order form            , ORDER.TXT  ,  1, 1, N,  N
+Windows COMMDLG.DLL   , COMMDLG.DLL,  1, 1, Y,  N
+Help support          , ZEUS.HLP   ,  1, 1, N,  Y
+Help index file       , ZEUS.ZIX   ,  3, 1, N,  Y
+Main executable       , ZEUS.EXE   ,  1, 1, N,  Y
+Compiler configuration, ZEUS.CFG   ,  1, 1, N,  Y
+Zeus user guide       , ZEUS.WRI   ,  1, 1, N,  Y
+Compiler PIF file     , ZEUSDOS.PIF,  1, 1, N,  Y
+Electric expansion    , ZEUS.ELC   ,  2, 1, N,  Y
+Pascal Extension File , PAS.TXT    ,  1, 1, N,  N
+C/C++ Extension File  , CCPP.TXT   ,  1, 1, N,  N
+Cobol Extension File  , COBOL.TXT  ,  1, 1, N,  N
+Text file utility     , STRIP.EXE  ,  1, 1, N,  Y
+Example BAT file      , CC.BAT     ,  1, 1, N,  Y
+Description In Zip    , FILE_ID.DIZ,  1, 1, N,  N
+
+[PM Info] 
+;File Name, App Description, Icon file #, Icon #
+ZEUS.EXE              , Zeus for Windows
+WRITE.EXE Zeus.wri    , Product and License Details
+WINHELP.EXE Zeus.hlp  , User and Registration Manual
+
+[End]

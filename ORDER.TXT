@@ -1,0 +1,57 @@
+Zeus for Windows Order Form
+===========================
+
+This order form also exists in the Zeus installation directory as the 
+file "order.txt". You can also print this form by selecting the Print 
+Topic option from the File pull-down menu. Make sure the printer is 
+setup for portrait mode.
+
+Send all orders to:
+
+	   	NorthStar Solutions
+		   P.O. Box 25262
+   		Columbia, SC  29224
+
+NOTE: All prices quoted are in US dollars only.
+
+***********************************************************************
+
+Your Postage Details:
+
+Please supply me: with quantity _____   @ $US 60.00 each  = ___________
+
+(which includes postage and handling)
+
+                                        Total Payment: $US  ___________
+
+       Name: ____________________________________   Date: _____________
+
+    Company: __________________________________________________________
+
+    Address: __________________________________________________________
+             __________________________________________________________
+             __________________________________________________________
+
+City, State: _____________________________     Zip: ___________________
+
+    Country: _____________________________  
+
+ Media Size: 5.25" Disk ____ or 3.5" Disk ____ or Either size ____ 
+
+***********************************************************************
+
+Your Credit Card Details (if applicable):
+
+Card Holder Name:  ___________________________________________
+
+       Card Type:  Mastercard ___      Visa ___
+
+Card Number: |__|__|__|__| |__|__|__|__| |__|__|__|__| |__|__|__|__|
+
+      Card Valid: ____ / ____  to  ____ / ____
+
+Phone Number: (____)__________________
+
+        Signature: ____________________________________________
+
+***********************************************************************
