@@ -6,7 +6,7 @@
 VENDINFO standard v1.04, produced by VendEdit v1.30, 7-May-1996
 
 ===== Product Information ==============================
-   Product:             Zeus Programmers Editor (IDE) for Windows
+   Product:             Zeus Programmers Editor (IDE) for WIN32
    Version:             2.15
    Version Date:        22-Apr-1996
    Product Type:        Software
@@ -14,29 +14,29 @@ VENDINFO standard v1.04, produced by VendEdit v1.30, 7-May-1996
       Shareware, freely distributable by all channels
 
    Product Description: For those looking for a Brief, Wordstar, 
-                        Epsilon editor for Windows, your search is 
-                        over. Features include, MDI support, status 
-                        and toolbar, syntax color highlighting, in 
-                        edit compile, automatic backup, file restore 
-                        on startup, error listing, undo/redo, search,
-                        replace, bookmarks, column, block and stream 
-                        marking, quick help feature, fast loading, 
-                        support for grep and C TAGS. All this and 
-                        much more.
+                        Epsilon editor for Windows95, NT, your search
+                        is over. Features include, MDI support, 
+                        status and toolbar, syntax color 
+                        highlighting, in edit compile, automatic 
+                        backup, file restore on startup, error 
+                        listing, undo/redo, search, replace, 
+                        bookmarks, column, block and stream marking, 
+                        quick help feature, fast loading, support for
+                        grep and C TAGS. All this and more. 
    Reason for version:  New features have been added and several bug 
                         have been fixed.
 
    Category:            Writing applications; Text editors
    Keywords:            text editor programming tool programmer 
                         windows software Zeus Brief Epsilon
-   Required Packages:   ZEUSV215
-   This Package:        ZEUSV215
+   Required Packages:   ZE32V215
+   This Package:        ZE32V215
    Registration Fee:    70.00 (US Dollars)
 
    Required Configuration
       Processor Family: Intel 80x86 (minimum 8086/8088)
-      Minimum OS:       Windows 3.0
-      Standard RAM:     4000K
+      Minimum OS:       Windows 95
+      Standard RAM:     8000K
       Hard Drive Space: 800K
       Req'd Software:   N
 
@@ -70,22 +70,23 @@ VENDINFO standard v1.04, produced by VendEdit v1.30, 7-May-1996
       All rights reserved.
 
 
-About Zeus for Windows
-----------------------
+About Zeus for Windows 95, NT
+-----------------------------
 
 For those who have been looking for a Brief,WordStar or Epsilon editor
-for Windows, your search is over.  Zeus supports features including, MDI
-file support, status bar and toolbar, syntax colorizing for any language
-including C and C++, full background compilation, inline error listing
-and error correction, automatic file backup, unlimited undo/redo, search
-and replace with support for regular expressions, bookmarks, mouse and
-keyboard marking (supports column, block and stream marking modes),
-quick help keyword searching (will search ANY number of WinHelp files
-for any keyword), programmable keyboard expansion (templates), keyboard
-macros, configurable external tool support, DOS command line support,
-smart indenting, File Manager drag and drop support, and of course
-supports the Brief, Wordstar and Epsilon keyboard keystrokes mapping or
-you can create your own. All this and much more.
+for Windows 95, NT, your search is over.  Zeus supports features
+including, MDI file support, status bar and toolbar, syntax colorizing
+for any language including C and C++, full background compilation,
+inline error listing and error correction, automatic file backup,
+unlimited undo/redo, search and replace with support for regular
+expressions, bookmarks, mouse and keyboard marking (supports column,
+block and stream marking modes), quick help keyword searching (will
+search ANY number of WinHelp files for any keyword), programmable
+keyboard expansion (templates), keyboard macros, configurable external
+tool support, DOS command line support, smart indenting, File Manager
+drag and drop support, and of course supports the Brief, Wordstar and
+Epsilon keyboard keystrokes mapping or you can create your own. All this
+and much more.
 
 
 Package Details
@@ -122,8 +123,8 @@ As released by the author or publisher, this package contained the
 following files in addition to this VENDINFO.DIZ:
 
         Filename      Size     Date       Time     CRC32
-      READ_ME.1ST      171   7-May-1996  10:11a   F9D97F00
-      READ_ME.BAT      423   7-May-1996  10:11a   A35BD94B
+      READ_ME.1ST      171   7-May-1996  10:07a   F9D97F00
+      READ_ME.BAT      421   7-May-1996  10:07a   64048B3B
            CC.BA_     1662  26-Mar-1996  12:08p   06E9511B
         BRIEF.BN_      829  28-Jan-1996  02:18p   B8AFDD61
       BRIEFEX.BN_     1044  26-Mar-1996  07:43p   4CE4FA6E
@@ -136,11 +137,11 @@ following files in addition to this VENDINFO.DIZ:
          GREP.C_      6630  10-Apr-1996  10:24a   1C1330FD
      WILDCARD.C_      1580  14-Dec-1995  12:43p   E7A4C4D1
        PREFIX.DA_      193  21-Oct-1995  12:19p   B1A3A477
-      FILE_ID.DIZ      421   7-May-1996  10:11a   ED80E4FD
+      FILE_ID.DIZ      422   7-May-1996  10:07a   2522415D
       COMMDLG.DLL    89248  10-Jun-1992  03:10a   32FED56E
         CTL3D.DLL    21008   1-Feb-1994  12:00a   244B66FB
         METER.DLL    15537  21-Feb-1991  01:00a   FBE3A725
-       VENDOR.DOC      216   7-May-1996  10:11a   13796CEE
+       VENDOR.DOC      216   7-May-1996  10:07a   13796CEE
          ZEUS.EL_      839   6-Feb-1995  09:00p   254D6CF7
        EXPAND.EXE    16378   1-Nov-1993  03:11a   CF5F51E9
         SETUP.EXE   106000   7-Oct-1995  12:43p   B4CD2E5F
@@ -148,15 +149,15 @@ following files in addition to this VENDINFO.DIZ:
         CTAGS.EX_    10971  18-Jan-1996  12:57p   5FDFE6B6
         FGREP.EX_    26254  10-Apr-1996  10:26a   0922C83B
         STRIP.EX_    10323   5-Apr-1995  06:16p   2517CD7D
-         ZEUS.EX_   394444  11-Apr-1996  07:02a   9637F11F
+       ZEUS32.EX_   324412  11-Apr-1996  07:14a   139C7B59
          ZEUS.HL_   177086   7-May-1996  10:05a   2DC6B313
        CONFIG.H_      5173   5-Apr-1992  02:02p   4B9A2686
         CTYPE.H_       661   5-Apr-1992  02:03p   B47DEECB
          CINC.ID_    10046  18-Jan-1996  05:27p   B14A023B
         CTAGS.ID_    10013  18-Jan-1996  05:27p   71621186
         FGREP.ID_    10200   8-Apr-1996  11:11p   3CBC9CF2
-        SETUP.INF     4834   5-May-1996  08:14a   314B547E
-         ZEUS.IN_     1044  10-Apr-1996  10:30a   CED90BAD
+        SETUP.INF     4832   5-May-1996  08:13a   91A34050
+       ZEUS32.IN_     1068   4-Apr-1996  11:38a   3B7DF3C0
      ZEUSELEC.IN_     2696  13-Jan-1996  11:53p   E4FA07D5
      ZEUSTOOL.IN_      995  11-Feb-1996  01:18p   0141969F
         BRIEF.KE_     1265  18-Jan-1996  11:29a   6BBAAA2C
@@ -171,7 +172,7 @@ following files in addition to this VENDINFO.DIZ:
        ZEUSRC.PR_      402  22-Jan-1996  02:29p   CECE2D13
       ZEUSTXT.PR_      216  22-Jan-1996  02:17p   D711C087
       HISTORY.TXT    22388   6-May-1996  10:46a   B276E55F
-       VENDOR.TXT      216   7-May-1996  10:11a   13796CEE
+       VENDOR.TXT      216   7-May-1996  10:07a   13796CEE
         ASCII.TX_     2607  20-Dec-1995  06:29p   2CDA31F7
           ASM.TX_      262  14-Jan-1996  12:11a   E96F6151
           BAT.TX_       93  14-Jan-1996  12:09a   62DF0A27
@@ -273,8 +274,7 @@ are available from many sources, including the originators of VENDINFO:
 ===== Compressed Data Record Follows ===================
 
 PK
-   iQ§ |ÕÏqá  œ#  	   VENDDATA.n)		m		-		]		&	']		$6-	M	=	]	-	=-	]-ýÍþÞN.^>%#+,<|<&÷÷÷—‘óròcæäf‡ž4IÛ^îÇ(Ù÷¢Ã&d°÷=\¼ø­&Ý÷°LZ(
-)ô=âíGÖÉ¨gªžW©Ü3þ¼m¦óÆÌÏKð3%>Ò:oS*äÖh•ïþ97õgÞ7ôçŽ?ã¥Ý_¿wþoÛîöß¼ýñ¦Ýó–_ï«>óÌ5ån-'G$‚|§5¬º4b^”¬Èb±œÐáÃ;¬SÍ¦SA°ð_X8[ñŸ0ÖYofûGšÎ–Ó¿¶LóM€7¦Ó›`W]Í+«Ûÿá¦ÿ*o{+‘Z¨\»2¦ñþešÒ×¹ê•¿ï>Ûé¢/¯jPíŸ<õÇ‚ÿZÆ_ÇNwRáoý\9^®smé·ÛþÑòcþ±/—§3´?ë=Ö‹Öaš–ú;(Ÿ</å×¦Å÷3ÖjÆbðK·;Ýz¿.ó•òºÜC9±òjgrèáVÊËîa’>à¶}RüNÿÚ'ÛÿõÃTyÃZûõWKïËmuŽ—ûÉ_¨/CÏÈ÷2÷ž#úË:bn½\óÜmj»¥Â}.œ¯¹~ÂWÞI—mˆî+3É/S-›Ý†s_¥Óº”{ú•æ3îRvb“ýÆAÔ¿MMfž¢Ù«Ì¹ý¥ hY­_°,zQ.ë÷†¾Â×Ž<¡ˆ©“ +ÓQ^TL§K*ú‹ÊHE«Û]^›æÌµÚŸW§ºÈâkD; Z=‹¦å…›³ÎË:_Má5íµéœ[ÖiÆU—µ²—Ó;‹ùÌ‚¬L½Ÿw¼é7¹>½³}_éOHÀU{Î¸¬ÚowL À%ð}*±Ç^ývŠ-Xã/È	ÒŸûJý:û)S³AEã:v+Þ²<›Ù7¥üæ‘5§‰Ss8ç)Ã=³=ÓÎ®€¸]T~»³6o¹@j´7¿ªûÛyd¶íLe´E§kÆ>ÍáçÊëñ,Óâ-ã$XÓV†1?ó³Ë
-üÐmÅUèÌ›Çn>þÜ|ü¹ùÜtº[""ªˆì§8ý»ÀèR¥É$Fƒ"±Ãö“.©ê {ˆTÄ–cÏKö¼†-8{øZ8j"<17f–0L5cö².±ø©D:N™Cê;÷ó»½SÑKÐ-F?ŽëÑWÊ4LßY#*Èë¶Â3|Ô!ùG6\*ûÇšR~Qì8<c£3M€n6.DV¤ßhñLô\¿e}>Óÿ©½YT¿Ùˆ;n£ðÇ‹Ý ÊLÆ9ÝNFI³¯¸Ñ.)ŽÓ@DJ5cò6ßäÖ¶*ù”Ö¡õz2>(»Àa4çÁ¤ùìì£ôy´4ÿ]àx4IDðK»P%"'âõæôß(.Œ?^ÜÂ’BDðxhA˜¥IvlŽHà(Y?Z–wF+ê,¸³Æß5MMúøï§«­K£ôäcn¨$ß.púw‘aàã|üúPK
+   õP§ ¸{%8  œ#  	   VENDDATA.u	-		m)		]			-			46	=	-	M	M	m	-}ý=~þ>þ>%$&+L|<&÷÷÷—Q
+rcååæç„8i’°Ö½4üBÉ¾‡˜Pì}O	Q=ÔjÒ}Va ƒRˆ‚³GºÝÀ:m<ÕñU*w~Áºôgü‰òb$ü™9/·¸µ¬7KŠö@ýÜ›ú3ïë»ñ?ã¥ÝŸuïôßºÞõ¿iýÃM»ã›VWõY3—”»6‘ˆ·¸žV·êÒHÅõ(b¾œÐýYg†SAPàþ……³ÿ‰bËÍÜ~ä3®Ù,ýkó™nB¼©Voð®¿ZPÃÿýMéÿ%ÛP÷fbµÈ|±ï3Îpÿ|Nú2UÉ÷÷µ'´ÚÔ‹aûÉ§%øßXËøËÐjþæÏwãÅ2Õæn½Û+ï]¹|Æ~û¨ßwX¯Xûsæ¬7¢|òÔ¿”_;³îg,ÕŒÙà{”ÞZí¬n™)ç+åe¾#å°•WÏ°!øJy~ýð#é#7û –i=©Cœ¢íçF5°µÚæßÀh¦G0ñÓj#šñ	r‹í¿®?•×/5ÿjé]yÃçx¾ßü¡ú~³&¬=Ì½ã(zçeÀÜ:ÀÆx×³áInlèkWÛñ•7¦³z‰î*Óö³æSKWg·~¼¯ò}®,pÝBów.s±	‡~CëßŠ½“'[m;·êü{ÐÔÂ e7á<KèEÂVëf«˜P@©G€UA…açt”d«M*ùMóI…wåiu»«„°†®v¦Ì¥Ú/‹ê*K—ˆDv@µ:mÌsÉÿÀË4/Óå”}MIé½vÆñÖúåL¸ê¼T–þ®­¶³ÐŸYZ9£w¼é79ë¼q–ø‰¸’…»ê¬wH¸}®ò}ª´Ç^úí[0‡_˜Ä?u•¬ËíO&"gƒŠÆuìV¼e VIdgˆß”ò›Öœ&5çðVží;NŒ;»¼ìj×=•_ï¤Í[>ýM¯JÇþ:>2Û:ž2›ÔŒÇ"r=§ ºÃO=”×ã	Ló7G°¦-:c~>æç”1ø¡ÛŠ+¡3oßùrGç=17n>þÜ|XZm-±UDvÓ¿œþ]`ÐR¥©0	=¸ÛOØ¤ª‡;x.:GÙó!´àíjá©‰ˆÄŠË,D˜ŠÅìe]bþSéäp2ûÔçD>?±»Ñ;½ ÝbvÃ°ü˜]¥lÂô4bAZÖEœáû£õÉ?F¿à²œû¤üxqÂàƒùkôô³qÁ³#ÿz#^<žéÂÎ‰á7/Ïgúÿ/0ÛñJ4ê	âÄ¯ÇýÅqê@™É8§±»ÀÉ(i4Š‹ê[IQuÄQ§TC’×é&7×EÉ§4OÄæëÈø ì‡Ñœ“æ³³¨ÏKóñßŽGƒô@„°´U"r#ýØoJÿõ¢¸ñÇ[×ƒ‚}OfØ¥IvlŽHà gÿXgžß8XQgÁ5þî¬yhhÒÇ8EbXmBSš^ÂÚƒ2‰Ã·œþ]`TØÀÇøøà£¾PK
  
-   iQ§ |ÕÏqá  œ#  	                VENDDATA.PK      *       
+   õP§ ¸{%8  œ#  	                VENDDATA.PK      *   6    

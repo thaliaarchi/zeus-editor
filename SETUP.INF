@@ -25,7 +25,7 @@ DefPMGroup=ZEUS.GRP, Zeus for Windows
 5=zExample
 
 ;Zeus for Windows, Windows 95 or Windows NT Exe files
-;Main executable       , ZEUS95.EXE  ,  1 ,  1  ,   N   ,    Y
+;Main executable       , ZEUS32.EXE  ,  1 ,  1  ,   N   ,    Y
 ;Main executable       , ZEUS.EXE    ,  1 ,  1  ,   N   ,    Y
 
 [Files] 
@@ -37,8 +37,8 @@ Description In Zip    , FILE_ID.DIZ ,  1 ,  1  ,   N   ,    N
 Windows COMMDLG.DLL   , COMMDLG.DLL ,  1 ,  1  ,   Y   ,    N
 Help support          , ZEUS.HLP    ,  1 ,  1  ,   N   ,    Y
 Help index file       , ZEUS.ZIX    ,  3 ,  1  ,   N   ,    Y
-Zeus INI file         , ZEUS.INI    ,  1 ,  1  ,   N   ,    Y
-Main executable       , ZEUS.EXE    ,  1 ,  1  ,   N   ,    Y
+Zeus INI file         , ZEUS32.INI  ,  1 ,  1  ,   N   ,    Y
+Main executable       , ZEUS32.EXE  ,  1 ,  1  ,   N   ,    Y
 Compiler configuration, ZEUS.CFG    ,  1 ,  1  ,   N   ,    Y
 Zeus user guide       , ZEUS.WRI    ,  1 ,  1  ,   N   ,    Y
 Commmand line PIF file, ZEUSDOS.PIF ,  1 ,  1  ,   N   ,    Y
@@ -93,7 +93,7 @@ FGREP project file    , FGREP.IDE   ,  5 ,  1  ,   N   ,    Y
 
 [PM Info] 
 ;File Name, App Description, Icon file #, Icon #
-ZEUS.EXE              , Zeus for Windows
+ZEUS32.EXE            , Zeus for WIN32
 WRITE.EXE Zeus.wri    , Product and License Details
 WINHELP.EXE Zeus.hlp  , User Manual
 
