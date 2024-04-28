@@ -19,11 +19,12 @@
  */
 
 #include <stdio.h>
+#include <stdlib.h>
 #include <string.h>
 #ifndef	WILDCARD_NO_MAIN
-# include "config.h"
+# include "CONFIG.H"
 #endif
-#include "ctype.h"
+#include "CTYPE.H"
 #ifdef	__TURBOC__
 #include <dir.h>
 #endif
@@ -57,16 +58,16 @@
 
 #define	MAXFILES	1000
 
-int pstrcmp();
-extern char *calloc();
+void expand(char *name);
+void addfile(char *buf);
+int pstrcmp(const void *a, const void *b);
 
 char *files[MAXFILES];
 int nfiles;
 
 #ifndef	WILDCARD_NO_MAIN
 
-main(argc, argv)
-	char **argv;
+int main(int argc, char **argv)
 {
 	int i;
 
@@ -84,9 +85,7 @@ main(argc, argv)
 }
 
 #else
-char **wildexpand(argc, argv)
-	int *argc;
-	char **argv;
+char **wildexpand(int *argc, char **argv)
 {
 	int i;
 	
@@ -97,8 +96,7 @@ char **wildexpand(argc, argv)
 }	
 #endif
 
-expand(name)
-	char *name;
+void expand(char *name)
 {
 	char *filespec;
 	int wildcard=0;
@@ -140,20 +138,18 @@ expand(name)
 	}
 }
 
-addfile(buf)
-	char *buf;
+void addfile(char *buf)
 {
 	char *p;
 
 //	for (p=buf; *p; p++)
 //		*p=tolower(*p);
 
-	if (nfiles<MAXFILES && (files[nfiles]=calloc(strlen(buf)+1, 1))!=0)
+	if (nfiles<MAXFILES && (files[nfiles]=(char *)calloc(strlen(buf)+1, 1))!=0)
 		strcpy(files[nfiles++], buf);
 }
 
-int pstrcmp(a, b)
-	char **a, **b;
+int pstrcmp(const void *a, const void *b)
 {
-	return strcmp(*a, *b);
+	return strcmp(*(const char **)a, *(const char **)b);
 }

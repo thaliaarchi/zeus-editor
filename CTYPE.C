@@ -4,8 +4,8 @@
  * version of <ctype.h>.  It should be portable.
  */
 
-#include "config.h"
-#include "ctype.h"
+#include "CONFIG.H"
+#include "CTYPE.H"
 
 uchar	_ct_toupper[256];
 uchar	_ct_tolower[256];
@@ -18,11 +18,12 @@ uchar	_ct_ctypes[256];
  * If you don't want to use any special flipcase characters, then pass an
  * empty string.
  */
-void _ct_init(flipcase)
-	uchar	*flipcase;	/* list of non-standard lower/upper letter pairs */
+void _ct_init(
+	const uchar	*flipcase	/* list of non-standard lower/upper letter pairs */
+)
 {
-	int	i;
-	uchar	*scan;
+	int		i;
+	const uchar	*scan;
 
 	/* reset all of the tables */
 	for (i = 0; i < 256; i++)

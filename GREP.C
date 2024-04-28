@@ -20,7 +20,9 @@
  */
 #include <dir.h>
 #include <stdio.h>
+#include <stdlib.h>
 #include <ctype.h>
+#include <string.h>
  /*
  * grep.
  *
@@ -37,7 +39,7 @@
  * See below for more information.
  *
  */
-char	*documentation[] = {
+const char	*documentation[] = {
 "grep searches a file for a given pattern.  Execute by",
 "   grep [flags] regular_expression file_list",
 "",
@@ -53,7 +55,7 @@ char	*documentation[] = {
 "The -f flag reverses this action (print name no file, not if more).",
 "",
 0 };
-char	*patdoc[] = {
+const char	*patdoc[] = {
 "The regular_expression defines the pattern to search for.  Upper- and",
 "lower-case are always ignored.  Blank lines never match.  The expression",
 "should be quoted to prevent file-name translation.",
@@ -118,8 +120,21 @@ char	file_name[81];
 char	lbuf[LMAX];
 char	pbuf[PMAX];
 /*******************************************************/
-main(argc, argv)
-char *argv[];
+void	file(char *s);
+void	cant(char *s);
+void	help(const char **hp);
+void	usage(const char *s);
+void	compile(char *source);
+char *	cclass(char *source, char *src);
+void	store(int op);
+void	badpat(const char *message, char *source, char *stop);
+void	grep(FILE *fp, char *fn);
+int	match();
+char *	pmatch(char *line, char *pattern);
+void	error(const char *s);
+/*******************************************************/
+int
+main(int argc, char *argv[])
 {
    register char   *p;
    register int    c, i;
@@ -137,7 +152,7 @@ char *argv[];
    if (argc == 2 && argv[1][0] == '?' && argv[1][1] == 0) {
       help(documentation);
       help(patdoc);
-      return;
+      return 0;
       }
    nfile = argc-1;
    gotpattern = 0;
@@ -145,7 +160,7 @@ char *argv[];
       p = argv[i];
       if (*p == '-') {
 	 ++p;
-	 while (c = *p++) {
+	 while ((c = *p++)) {
 	    switch(tolower(c)) {
 	    case '?':
 	       help(documentation);
@@ -192,7 +207,7 @@ char *argv[];
 
       for (i=1; i < argc; ++i)
       {
-	 if (p = argv[i])
+	 if ((p = argv[i]))
 	 {
      	if (strchr(p, '?') || strchr(p, '*'))
         {
@@ -232,35 +247,35 @@ char *argv[];
 
 }
 /*******************************************************/
-file(s)
-char *s;
+void
+file(char *s)
 {
 //-- JAJ better file handling for Zeus
 //   printf("File %s:\n", s);
    printf("%-13s :", s);
 }
 /*******************************************************/
-cant(s)
-char *s;
+void
+cant(char *s)
 {
 //-- JAJ pipe to stdout so Zeus can see it	
 //   fprintf(stderr, "%s: cannot open\n", s);
    fprintf(stdout, "%s: cannot open\n", s);
 }
 /*******************************************************/
-help(hp)
-char *hp;
 /*
  * Give good help
  */
+void
+help(const char **hp)
 {
-   register char   **dp;
+   register const char   **dp;
    for (dp = hp; *dp; dp++)
       printf("%s\n", *dp);
 }
 /*******************************************************/
-usage(s)
-char	*s;
+void
+usage(const char *s)
 {
 //-- JAJ pipe to stdout so Zeus can see it	
 //   fprintf(stderr, "?GREP-E-%s\n", s);
@@ -272,23 +287,24 @@ char	*s;
    exit(1);
 }
 /*******************************************************/
-compile(source)
-char	   *source;   /* Pattern to compile	    */
 /*
  * Compile the pattern into global pbuf[]
  */
+void
+compile(
+   char	   *source   /* Pattern to compile	    */
+)
 {
    register char  *s;	      /* Source string pointer	   */
    register char  *lp;	      /* Last pattern pointer	   */
    register int   c;	      /* Current character	   */
    int		  o;	      /* Temp			   */
    char 	  *spp;       /* Save beginning of pattern */
-   char 	  *cclass();  /* Compile class routine	   */
    s = source;
    if (debug)
       printf("Pattern = \"%s\"\n", s);
    pp = pbuf;
-   while (c = *s++) {
+   while ((c = *s++)) {
       /*
        * STAR, PLUS and MINUS are special.
        */
@@ -372,13 +388,14 @@ char	   *source;   /* Pattern to compile	    */
    }
 }
 /*******************************************************/
-char *
-cclass(source, src)
-char	   *source;   /* Pattern start -- for error msg.      */
-char	   *src;      /* Class start	       */
 /*
  * Compile a class (within [])
  */
+char *
+cclass(
+   char	   *source,   /* Pattern start -- for error msg.      */
+   char	   *src       /* Class start	       */
+)
 {
    register char   *s;	      /* Source pointer    */
    register char   *cp;       /* Pattern start	   */
@@ -421,17 +438,20 @@ char	   *src;      /* Class start	       */
    return(s);
 }
 /*******************************************************/
-store(op)
+void
+store(int op)
 {
    if (pp >= &pbuf[PMAX])
       error("Pattern too complex\n");
    *pp++ = op;
 }
 /*******************************************************/
-badpat(message, source, stop)
-char  *message;       /* Error message */
-char  *source;	      /* Pattern start */
-char  *stop;	      /* Pattern end   */
+void
+badpat(
+   const char  *message,      /* Error message */
+   char        *source,	      /* Pattern start */
+   char        *stop	      /* Pattern end   */
+)
 {
    register int    c;
 //-- JAJ pipe to stdout so Zeus can see it	
@@ -439,17 +459,19 @@ char  *stop;	      /* Pattern end   */
 //   fprintf(stderr, "-GREP-E-Stopped at byte %d, '%c'\n",
 //	 stop-source, stop[-1]);
    fprintf(stdout, "-GREP-E-%s, pattern is\"%s\"\n", message, source);
-   fprintf(stdout, "-GREP-E-Stopped at byte %d, '%c'\n",
+   fprintf(stdout, "-GREP-E-Stopped at byte %ld, '%c'\n",
 	 stop-source, stop[-1]);
    error("?GREP-E-Bad pattern\n");
 }
 /*******************************************************/
-grep(fp, fn)
-FILE	   *fp;       /* File to process	    */
-char	   *fn;       /* File name (for -f option)  */
 /*
  * Scan the file for the pattern in pbuf[]
  */
+void
+grep(
+   FILE	   *fp,       /* File to process	    */
+   char	   *fn        /* File name (for -f option)  */
+)
 {
    register int lno, count, m;
    lno = 0;
@@ -478,13 +500,13 @@ char	   *fn;       /* File name (for -f option)  */
    }
 }
 /*******************************************************/
-match()
 /*
  * Match the current line (in lbuf[]), return 1 if it does.
  */
+int
+match()
 {
    register char   *l;	      /* Line pointer	    */
-   char *pmatch();
    for (l = lbuf; *l; l++) {
       if (pmatch(l, pbuf))
 	 return(1);
@@ -493,9 +515,10 @@ match()
 }
 /*******************************************************/
 char *
-pmatch(line, pattern)
-char		   *line;     /* (partial) line to match      */
-char		   *pattern;  /* (partial) pattern to match   */
+pmatch(
+   char		   *line,     /* (partial) line to match      */
+   char		   *pattern   /* (partial) pattern to match   */
+)
 {
    register char   *l;	      /* Current line pointer	      */
    register char   *p;	      /* Current pattern pointer      */
@@ -510,7 +533,7 @@ char		   *pattern;  /* (partial) pattern to match   */
    p = pattern;
    while ((op = *p++) != ENDPAT) {
       if (debug > 1)
-	 printf("byte[%d] = 0%o, '%c', op = 0%o\n",
+	 printf("byte[%ld] = 0%o, '%c', op = 0%o\n",
 	       l-line, *l, *l, op);
       switch(op) {
       case CHAR:
@@ -588,7 +611,7 @@ char		   *pattern;  /* (partial) pattern to match   */
 	    l = e;		 /* Get longest match	*/
 	 while (*p++ != ENDPAT); /* Skip over pattern	*/
 	 while (l >= are) {	 /* Try to match rest	*/
-	    if (e = pmatch(l, p))
+	    if ((e = pmatch(l, p)))
 	       return(e);
 	    --l;		 /* Nope, try earlier	*/
 	 }
@@ -601,12 +624,12 @@ char		   *pattern;  /* (partial) pattern to match   */
    return(l);
 }
 /*******************************************************/
-error(s)
-char *s;
+void
+error(const char *s)
 {
 //-- JAJ pipe to stdout so Zeus can see it	
 //   fprintf(stderr, "%s", s);
    fprintf(stdout, "%s", s);
    exit(1);
 }
-
+

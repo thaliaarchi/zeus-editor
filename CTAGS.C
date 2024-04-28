@@ -59,8 +59,9 @@
  */
 
 #include <stdio.h>
+#include <stdlib.h>
 #include <string.h>
-#include "config.h"
+#include "CONFIG.H"
 #ifndef FALSE
 # define FALSE	0
 # define TRUE	1
@@ -75,7 +76,7 @@
 # define BLKSIZE 1024
 #endif
 
-#include "ctype.c" /* yes, that really is the .c file, not the .h one. */
+#include "CTYPE.C" /* yes, that really is the .c file, not the .h one. */
 
 /* -------------------------------------------------------------------------- */
 /* Some global variables */
@@ -104,8 +105,9 @@ int	file_header;	/* boolean: is the current file a header file? */
 /* This function opens a file, and resets the line counter.  If it fails, it
  * it will display an error message and leave the file_fp set to NULL.
  */
-void file_open(name)
-	char	*name;	/* name of file to be opened */
+void file_open(
+	char	*name	/* name of file to be opened */
+)
 {
 	/* if another file was already open, then close it */
 	if (file_fp)
@@ -184,8 +186,9 @@ int file_getc()
 }
 
 /* This function ungets a character from the current source file */
-void file_ungetc(ch)
-	int	ch;	/* character to be ungotten */
+void file_ungetc(
+	int	ch	/* character to be ungotten */
+)
 {
 	file_prevch = ch;
 }
@@ -197,9 +200,10 @@ void file_ungetc(ch)
  *
  * This is meant to be used when generating a tag line.
  */
-void file_copyline(seek, fp)
-	long	seek;	/* where the lines starts in the source file */
-	FILE	*fp;	/* the output stream to copy it to */
+void file_copyline(
+	long	seek,	/* where the lines starts in the source file */
+	FILE	*fp	/* the output stream to copy it to */
+)
 {
 	long	oldseek;/* where the file's pointer was before we messed it up */
 	char	ch;	/* a single character from the file */
@@ -249,8 +253,9 @@ int	cpp_prevch;	/* an ungotten character, if any */
 int	cpp_refsok;	/* boolean: can we echo characters out to "refs"? */
 
 /* This function opens the file & resets variables */
-void cpp_open(name)
-	char	*name;	/* name of source file to be opened */
+void cpp_open(
+	char	*name	/* name of source file to be opened */
+)
 {
 	/* use the lower-level file_open function to open the file */
 	file_open(name);
@@ -261,10 +266,11 @@ void cpp_open(name)
 }
 
 /* This function copies a character from the source file to the "refs" file */
-void cpp_echo(ch)
-	int	ch; /* the character to copy */
+void cpp_echo(
+	int	ch /* the character to copy */
+)
 {
-	static	wasnl;
+	static int	wasnl;
 
 	/* echo non-EOF chars, unless not making "ref", or echo turned off */
 	if (ch != EOF && make_refs && cpp_refsok && !file_header)
@@ -292,8 +298,8 @@ void cpp_echo(ch)
 int cpp_getc()
 {
 	static
-	int	ch;	/* the next input character */
-	char	*scan;
+	int		ch;	/* the next input character */
+	const char	*scan;
 
  	//- JAJ added
    int   count;
@@ -406,8 +412,9 @@ int cpp_getc()
 }
 
 /* This puts a character back into the input queue for the source file */
-cpp_ungetc(ch)
-	int	ch;	/* a character to be ungotten */
+void cpp_ungetc(
+	int	ch	/* a character to be ungotten */
+)
 {
 	cpp_prevch = ch;
 }
@@ -448,7 +455,7 @@ cpp_ungetc(ch)
 char	lex_name[BLKSIZE];	/* the name of a "NAME" token */
 long	lex_seek;		/* start of line that contains lex_name */
 
-lex_gettoken()
+int lex_gettoken()
 {
 	int	ch;		/* a character from the preprocessor */
 	int	next;		/* the next character */
@@ -652,9 +659,10 @@ lex_gettoken()
 /* This function generates a tag for the object in lex_name, whose tag line is
  * located at a given seek offset.
  */
-void maketag(scope, seek)
-	int	scope;	/* 0 if global, or STATIC if static */
-	long	seek;	/* the seek offset of the line */
+void maketag(
+	int	scope,	/* 0 if global, or STATIC if static */
+	long	seek	/* the seek offset of the line */
+)
 {
 	/* output the tagname and filename fields */
 	if (scope == EXTERN)
@@ -688,8 +696,9 @@ void maketag(scope, seek)
 
 
 /* This function parses a source file, adding any tags that it finds */
-void ctags(name)
-	char	*name;	/* the name of a source file to be checked */
+void ctags(
+	char	*name	/* the name of a source file to be checked */
+)
 {
 	int	prev;	/* the previous token from the source file */
 	int	token;	/* the current token from the source file */
@@ -813,9 +822,10 @@ void usage()
 # include "vmswild.c"
 #endif
 
-main(argc, argv)
-	int	argc;
-	char	**argv;
+int main(
+	int	argc,
+	char	**argv
+)
 {
 	int	i, j;
 

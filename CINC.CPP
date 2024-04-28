@@ -6,7 +6,7 @@
 //-------------------------------------------------------------------------
 
 #include <stdio.h>
-#include <direct.h>
+// #include <direct.h>
 #include <stdlib.h>
 #include <search.h>
 #include <string.h>
@@ -49,7 +49,7 @@ int CheckFile(char *pszFileName)
    {
       for (int i = 0; i < (int)sIndex; ++i)
       {
-         if (stricmp(pszFileName, apszIncludeList[i]) == 0)
+         if (strcasecmp(pszFileName, apszIncludeList[i]) == 0)
          {
             sResult = 1;
             break;

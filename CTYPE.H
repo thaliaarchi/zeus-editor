@@ -35,6 +35,6 @@
 extern uchar	_ct_toupper[];
 extern uchar	_ct_tolower[];
 extern uchar	_ct_ctypes[];
-extern void	_ct_init(/* char *flipcase */);
+extern void	_ct_init(const uchar *flipcase);
 
 #endif /* ndef _CT_UPPER */
