@@ -18,7 +18,7 @@
  * privileges were granted by DECUS.
  *
  */
-#include <dir.h>
+#include <glob.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <ctype.h>
@@ -137,7 +137,7 @@ int
 main(int argc, char *argv[])
 {
    register char   *p;
-   register int    c, i;
+   register int    c, i, j;
    int		   gotpattern;
    int		   gotcha;
    FILE 	   *f;
@@ -145,7 +145,7 @@ main(int argc, char *argv[])
 //-- JAJ wildcard support
    int err;
    int count = 0;
-   struct ffblk findbuf;
+   glob_t findbuf;
 
    if (argc <= 1)
       usage("No arguments");
@@ -212,22 +212,23 @@ main(int argc, char *argv[])
      	if (strchr(p, '?') || strchr(p, '*'))
         {
 //-- JAJ wildcard support start (does not support directory wildcard ie c:\tmp\*.*
-    		err = findfirst(p, &findbuf, 0);
+    		if (glob(p, 0, NULL, &findbuf))
+    			error("bad wildcard");
 
-    		while (!err)
+    		for (j=0; j < findbuf.gl_pathc; ++j)
     		{
-        	    if ((f=fopen(findbuf.ff_name, "r")) == NULL)
+        	    if ((f=fopen(findbuf.gl_pathv[j], "r")) == NULL)
                 {
-        	       cant(findbuf.ff_name);
+        	       cant(findbuf.gl_pathv[j]);
                    break;
                 }
         	    else {
         	       count++;
-        	       grep(f, findbuf.ff_name);
+        	       grep(f, findbuf.gl_pathv[j]);
         	       fclose(f);
         	    }
-    			err=findnext(&findbuf);
     		}
+    		globfree(&findbuf);
 //-- JAJ wildcard support end
         }
         else

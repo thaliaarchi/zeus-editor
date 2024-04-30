@@ -18,6 +18,7 @@
  * we don't want a main function here.
  */
 
+#include <glob.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -25,36 +26,6 @@
 # include "CONFIG.H"
 #endif
 #include "CTYPE.H"
-#ifdef	__TURBOC__
-#include <dir.h>
-#endif
-
-#ifdef	M_I86
-#define	findfirst(a,b,c)	_dos_findfirst(a,c,b)
-#define	findnext		_dos_findnext
-#define	ffblk			find_t
-#define	ff_name			name
-#include <dos.h>
-#endif
-
-/* Atari TOS, MWC */
-#ifdef M68000
-#include <stat.h>
-#include <osbind.h>
-#define	findfirst(a,b,c)	(Fsetdta(b), (Fsfirst(a,c)))
-#define	findnext(x)		(Fsnext())
-#define	ff_name	d_fname
-#endif
-
-/* Atari TOS, GNU-C */
-#ifdef __m68k__
-#include <stat.h>
-#include <osbind.h>
-#define	findfirst(a,b,c)	(Fsetdta(b), (Fsfirst(a,c)))
-#define	findnext(x)		(Fsnext())
-#define	ff_name	dta_name
-#define	DMABUFFER struct _dta
-#endif
 
 #define	MAXFILES	1000
 
@@ -100,14 +71,11 @@ void expand(char *name)
 {
 	char *filespec;
 	int wildcard=0;
-#if defined(M68000) || defined(__m68k__)
-	DMABUFFER findbuf;
-#else
-	struct ffblk findbuf;
-#endif
+	glob_t findbuf;
 	int err;
 	char buf[80];
 	int lastn;
+	int i;
 
 	strcpy(buf, name);
 	for (filespec=buf; *filespec; filespec++)
@@ -124,14 +92,10 @@ void expand(char *name)
 	else
 	{
 		lastn=nfiles;
-		filespec++;
-		if ((err=findfirst(buf, &findbuf, 0))!=0)
-			addfile(buf);
-		while (!err)
+		if (!glob(buf, 0, NULL, &findbuf))
 		{
-			strcpy(filespec, findbuf.ff_name);
-			addfile(buf);
-			err=findnext(&findbuf);
+			for (i=0; i<findbuf.gl_pathc; i++)
+				addfile(findbuf.gl_pathv[i]);
 		}
 		if (lastn!=nfiles)
 			qsort(files+lastn, nfiles-lastn, sizeof(char *), pstrcmp);
